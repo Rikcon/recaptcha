@@ -33,8 +33,7 @@ if (!function_exists('renderDataAttributes')) {
             po.async = true;
             po.src = 'https://www.google.com/recaptcha/api.js?onload=laravelRecaptchaInit&render=explicit{!! (isset($lang) ? '&hl='.$lang : '') !!}';
             var s = document.getElementsByTagName('script')[0];
-            var temp = s.parentNode.insertBefore(po, s);
-            console.log(temp);
+            s.parentNode.insertBefore(po, s);
         })();
     }
 
